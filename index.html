@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <link href="proyecto_compartido.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="src/leaflet.legend.css">
+        <script src="https://kit.fontawesome.com/dd01359608.js" crossorigin="anonymous"></script>        
+        <title>Biodiversidad Boy-Cund</title>
+   
+    </head>
+    <header>
+        <nav class="menu_navegacion">
+            <div class="logo">
+                <img src="https://cdn.pixabay.com/photo/2014/04/03/11/55/globe-312563_640.png"/>
+            </div>
+            <div class="apartado-menu">
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#flora">Flora</a></li>
+                    <li><a href="#fauna">Fauna</a></li>
+                    <li><a href="#paramos">Páramos</a></li>
+                    <li><a href="#estadisticas">Estadísticas</a></li>
+                    <li><a href="#mapas">Mapas</a></li>
+                </ul>
+            </div>
+            
+            <div class="dark-mode">
+                <button class="switch" id="Switch">
+                    <span><i class="fa-solid fa-sun"></i></span> 
+                    <span><i class="fa-solid fa-moon"></i></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <section class="container-img"  id="inicio">
+            <div class="imagen_principal">
+                <img src="https://cdn.pixabay.com/photo/2019/08/28/02/22/stone-hung-4435694_1280.jpg">
+            
+                <div class="texto_inicio">
+                        <div class="texto">
+                            <h1>Boya-Cundi</h1>
+                            <p>Descubre Cundinamarca y Boyacá: dos joyas del corazón de Colombia</p>
+                        </div>
+                        <div class="boton">
+                            <a href="#cartas"><button>Conoce más aquí</button></a>
+                        </div>
+                </div>
+            </div>
+        </section>                                      
+        <section id="seccion1" class="container">
+            <div class="boyaca_cundinamarca">
+                <img src="https://cdn.pixabay.com/photo/2020/05/21/15/08/blue-wells-5201227_1280.jpg" alt="Departamento de Boyaca">
+                <h2>BOYACÁ</h2>
+                <p>Boyacá es una de las regiones más ricas en biodiversidad de Colombia, gracias a su variada geografía que abarca desde páramos y bosques de niebla hasta ecosistemas de tierras bajas. Esta diversidad de ecosistemas permite la existencia de una amplia gama de especies de flora y fauna, muchas de las cuales son endémicas y de gran importancia ecológica.</p>
+            </div>
+            <div class="boyaca_cundinamarca" id="cartas">
+                <img src="https://cdn.pixabay.com/photo/2015/04/02/03/23/field-703287_1280.jpg" alt="Departamento de Cundinamarca">
+                <h2>CUNDINAMARCA</h2>
+                <p>Cundinamarca es una región de Colombia con una biodiversidad notable, influenciada por su variada geografía que incluye montañas, valles, ríos y páramos. Esta diversidad geográfica se traduce en una rica variedad de ecosistemas que albergan numerosas especies de flora y fauna, muchas de las cuales son endémicas y de gran importancia ecológica.</p>
+            </div>
+            </section>
+        
+        <section id="seccion2" class="container">
+
+            <div class="encabezados_Seccion2" id="flora">
+                <h2 class="titlecards" id="flora-cundi">FLORA DE CUNDINAMARCA</h2>
+            </div>
+            <div class="parrafos_seccion2">
+                <p class="parrcards">El departamento de Cundinamarca cuenta con 9535 especies de plantas, de las 37718 que hay en Colombia. De las 9535 que se encuentran en la región, 7694 especies son Angiospermas, 709 especies son Helechos, 379 especies son Hepáticas y 635 especies son Musgos. 
+                Algunas de las tantas plantas que se encuentran en la región son: Aa leucantha, Abutilon giganteum, Abrodictyum sprucei, Abatia parviflora, Acalypha villosa, Acanthospermum hispidum, Acalypha wilkesiana, Zygodon reinwardtii, entre otras. 
+                </p>
+            </div>
+            
+            <div id="floracundi">
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://cdn.pixabay.com/photo/2023/08/12/23/54/nature-8186574_960_720.jpg" alt="Frailejón">
+                        <h3>Frailejón</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Frailejón</h3>
+                        <p>Planta embleática de los páramos de la región andina. Produce flores amarillas en la parte superor. similares a margaritas, que contrastan con su entorno frío y neblinoso.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://cdn.pixabay.com/photo/2020/04/22/12/48/orchid-5077959_1280.jpg" alt="Orquidea" alt="Orquidea">
+                        <h3>Orquidea</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Orquidea</h3>
+                        <p>Esta en la flor nacional de Colombia y se encuentra en varias regiones de Cundinamarca. La orquidea Cattaleya trianae tiene grandes pétalos de color lila.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/Ve1RHHm77vZ0ijRR1BhX_AuIQgxnPGAoTNvb5UqcKrU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9l/L2VmL015cmNpYW50/aGVzX2xldWNveHls/YS5KUEc" alt="Arrayán">
+                        <h3>Arrayán</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Arrayán</h3>
+                        <p>Arbol de hoja perenne con pequeñas hojas blancas y frutos comestibles.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/5QNfbrgl1GNcyfnEM2NIFAueJVOViZhEMjCx6YGdX3s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmxvcmVzLm5pbmph/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE2/LzEyL0VsLXNhJUMz/JUJBY28uanBn" alt="Sauco">
+                        <h3>Sauco</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Sauco</h3>
+                        <p>Arbusto que produce racimos de pequeñas flores blancas y bayas negras.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/SbRkFR20J6JnhZRL8qG5d3XgpI9wgYRjkOghK0bmg90/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2FyZGVuaWEubmV0/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzAzL1d3ejJhdERM/WlZ3aXh3Q1lTZTdn/TWdJbDhOQmxZeDVG/NElNN1RyN04tMS03/ODB4NTIwLndlYnA" alt="Lirio de Páramo">
+                        <h3>Lirio de Páramo</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Lirio de Páramo</h3>
+                        <p>Planta con flores que se adapta a las duras condiciones del páramo.</p>
+                    </div>
+                </div>   
+            </div>
+            
+
+            <div class="encabezados_Seccion2">
+                <h2 class="titlecards" id="flora-boya">FLORA DE BOYACÁ</h2>
+            </div>
+            <div class="parrafos_seccion2">
+                <p class="parrcards">El departamento de Boyacá cuenta con una flora bastante diversa, que trae consigo los diferentes ecosistemas que hacen parte de la región. En el departamento hay 7431 especies de plantas de las 37718 que hay en el municipio. De las7431 especies de plantas que hay en Boyacá, 5948 son Angiospermas, 563 especies son Helechos, 333 especies son Hepáticas y 495 especies son Musgos. 
+                Algunas de las plantas vasculares que se encuentran en este departamento son la Cycadopsida, la Equisetopsida, la Liliopsida, la Lycopodiopsida, Magnoliopsida, la Marattiopsida, la Pinopsida, la Polypodiopsida, y la Psilotopsida. 
+                Por otro lasdo, dentro de las plastas no vasculares, se encuentran plantas como la Andreaeopsida, la Bryopsida, la Jungermanniopsida, la Marchantiopsida, Polytrichopsida, y la Sphagnopsida, en donde todas ellas suman un aproximado de 568 plantas no vasculaers.
+                </p>
+            </div>
+            <div id="floracundi">
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/wJJZbq71zH6ltwNZ2LAXmWxfM1bYVa2juWK_MY-ABNY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/amFyZGluZXJpYW9u/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOC8xMi9yb2Js/ZS12aWVqby04MzB4/NTUzLmpwZw" alt="Roble">
+                        <h3>Roble</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Roble</h3>
+                        <p>Árbol nativo de los andes colombianos, conocido por su gran tamaño y longevidad. Puede alcanzar alturas de hasta 30 metros y tiene un tronco robusto con corteza gruesa y rugosa.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://media.gettyimages.com/id/977356316/es/foto/puya-alpestris.jpg?s=2048x2048&w=gi&k=20&c=2x7MADgYEhed2BUFcm7r9SX426SOgQaHRN7hPGw5Ok8=" alt="Puya">
+                        <h3>Puya</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Puya</h3>
+                        <p>Planta nativa de los páramos de Boyacá, conocida por sus grandes inflorescencias azules que pueden alcanzar hasta 2 metros de altura. Tiene hojas espinosas y rígidas que forman una roseta en  la base.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/vQ7QAaUH40NQ1qzUMkx43NVq1MPSoMPZ0n4fHokc4o4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzRjL0JhY2NoYXJp/c19oYWxpbWlmb2xp/YV9idXNoLmpwZw" alt="Chagualo">
+                        <h3>Chagualo</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Chagualo</h3>
+                        <p>Arbusto común en las zonas de páramo. Tiene hojas lanceoladas y produce flores pequeñas y blancas en racimos. Es importante para la protección del suelo y como alimento para la fauna.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/yS72-MLIRSpnZk-YDY3swOnTSkAxCCl_zR2VH5NGyyE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXZl/LnN0YXRpY2ZsaWNr/ci5jb20vMzMzMi8z/MTk1ODY0OTcwX2Y2/OTE0NTE5NDUuanBn" alt="Yarumo">
+                        <h3>Yarumo</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Yarumo</h3>
+                        <p>Arbol de rápido crecimiento que se encuentra en los bosques húmedos de Boyacá. Tiene grandes hojas palmeadas, que son verdes en la parte superior y blancas en la inferior.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://cdn.pixabay.com/photo/2017/06/19/21/42/frailejones-2420884_1280.jpg" alt="Frailejón">
+                        <h3>Frailejón</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Frailejón</h3>
+                        <p>Similar al frailejón de Cundinamarca, pero esta especie es característica de los páramos de boyacá. Tiene un tallo grueso y lanudo, hojas plateadas y flores amarillas en la cima.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="encabezados_Seccion2" id="fauna">
+                <h2 class="titlecards" id="fauna-cundi">FAUNA DE CUNDINAMARCA</h2>
+            </div>
+            <div class="parrafos_seccion2">
+                <p class="parrcards">El departamento de Cundinamarca cuenta con 4831 especies de animales, de las 32055 especies que hay en Colombia.  De las 4831 especies que hay en la región, 2959 son invertebradas y 1828 son vertebradas. 
+                Algunas de las especies animales que se encuentran en el departamento son: Aburria aburri, Acanthoscelides obtectus, Accipiter bicolor, Accipiter collaris, Acropternis orthonyx, Actinote pellenea, Aglaiocercus coelestis, entre otros. 
+                Dentro de las especies amenazadas está el Oso Andino, el Cóndor de los Andes, el Pez capitán de la sabana, la Nutria neotropical, el Cucarachero de Apolinar, entre otros.
+                Algunas especies invasoras de la región son: el Caracol gigante africano, los Perros ferales, el Ganso del Nilo, el Pato de collar, entre otras. 
+                </p>
+            </div>
+            <div id="floracundi">
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/jRl9-Gv4Q4c8Y9EIHQ4zdVzuPp7IldK-M6rxU_Vatx8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTIx/MTU4NTA2L3Bob3Rv/L2NhcHRpdmUtYW5k/ZWFuLWNvbmRvci5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/b0E5aEFXVFpZRlh4/WEZmMEk3NmNYR1k4/cTcwVkVXbl82bGJ2/UjJJX1Rnaz0" alt="Cóndor">
+                        <h3>Cóndor</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Cóndor</h3>
+                        <p>Ave majestuosa y símbolo nacional de Colombia. El cóndor andino es una de las aves voladorasmás grandes del mundo, con una envergadura de alas que puede superar los 3 metros.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/RXGn1MAiUEchC8M_hQPsQuBAFt0k0PoH0yob400hmoc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mYXJh/bGxvbmVzZGVsY2l0/YXJhLmJpb2V4cGxv/cmFkb3Jlcy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjIv/MDEvVmlzdGEtZ2Vu/ZXJhbC1PcnRhbGlz/LWNvbHVtYmlhbmEt/R3VhY2hhcmFjYS1j/b2xvbWJpYW5hLUNv/bG9tYmlhbi1DaGFj/aGFsYWNhLTEyMDF4/OTAxLmpwZw" alt="Guacharaca Andina">
+                        <h3>Guacharaca Andina</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Guacharaca Andina</h3>
+                        <p>Ave ruidosa que se encuentraen los bósques andinos. Tiene un plumaje marrón con matices verdosos y rojizos, y es conocida por su fuerte canto que resuena en el bosque.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/U831mzPCQbzBkT9LE5fZQpXx3EP4LN7xkRjy7dthk9I/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/cnR2ZS5lcy9uLzEx/MjA4MDA_dz04MDAm/cHJldmlldz0xNDI3/MDM1NzMwMzIwLmpw/Zw.jpeg">
+                        <h3>Zarigueya</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Zarigueya</h3>
+                        <p>Un marsupial nocturno que se encuentra en una variedad de habitats, desde bosques hasta areas urbanas.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://media.istockphoto.com/id/1460626566/es/foto/gallito-andino-macho-rupicola-peruvianus-tunki-paseriforme-cotinga-en-la-rama-de-un-%C3%A1rbol.jpg?s=1024x1024&w=is&k=20&c=Lq5QZUFuN_-J3Q3xroaAjDCJFUb6oQhoPKtO1-pwLik=" alt="Gallito de Roca">
+                        <h3>Gallito de Roca</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Gallito de Roca</h3>
+                        <p>Ave de llamativo color rojo anaranjado, conocida por su cresta distintiva y su plumaje brillante. Se encuentra en zonas montañosas y es famosa por sus danzas de cortejo.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/6Q-wj2pmZiCCYjOELsnxFFXkD3VnM0dDDLEI-Ybjg6k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWt5/bWEuY29tL2Jsb2cv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MTIvZWwtbG9yby1v/cmVqaWFtYXJpbGxv/LTc3MHg0NjAuanBn">
+                        <h3>Loro Orejiamarillo</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Loro Orejiamarillo</h3>
+                        <p>Este colorido loro se distingue por su plumaje verde brillante y sus manchas amarillas al rededor de las orejas. Es una especie que vive en los bosques de niebla.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="encabezados_Seccion2">
+                <h2 class="titlecards" id="fauna-boya">FAUNA DE BOYACÁ</h2>
+            </div>
+            <div class="parrafos_seccion2">
+                <p class="parrcards">El departamento de Boyaca cuenta con 3.479 especies de animales, de las 32055 especies que hay en Colombia.  De las 4831 especies que hay en la región, 1783 son invertebradas y 1674 son vertebradas. 
+                Algunas de las especies de animales que se encuentran en el departamento son: el Accipiter striatus, el Aglaiocercus kingii, el Alchisme inermis, la Amazilia tzacatl, la Amazona amazónica, Anabacerthia striaticollis, el Vireo leucophrys, entre otros. 
+                </p>
+            </div>
+            <div id="floracundi" class="final-margen">
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/b6nCWs4uHW8Q56xo2EdQeuhaq07Bdp619TLLoQcU3fo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQz/MTM2MDMyNy9waG90/by9jb25kb3IuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVJ1/cl9yMmgwQ2ZweUdL/SkhrUWNERVh5cjhI/VkdyRk9acGxaei1K/MzdqZUU9" alt="Cóndor">
+                        <h3>Cóndor</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Cóndor</h3>
+                        <p>Ave emblemática y una de las más grandes del mundo, conocida por su embergadura y su importancia cultural en los andes.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://cdn.pixabay.com/photo/2022/01/13/14/53/bird-6935465_1280.jpg" alt="Colibrí">
+                        <h3>Colibrí</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Colibrí</h3>
+                        <p>Ave pequeña y ágil, capaz de volar en cualquier dirección. Posee un plumaje brillante y un pico largo adaptado para alimentarse de néctar. Es vital para la polinización</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://cdn.pixabay.com/photo/2022/02/18/10/13/puma-7020354_1280.jpg" alt="Puma Andino">
+                        <h3>Puma Andino</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Puma Andino</h3>
+                        <p>Felino grande y ágil, con pelaje marrón claro. Es un cazador solitario que habita en los bosques andinos y páramos. Su cuerpo es esbelto, con una cola larga y poderosa.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/Hx4ktfZz6QpkcgTUapradWVfErhS1kSzYZ6fOkrOUOE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmF0dXdhLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOC8w/OC9NYW5keS0xMDI0/eDY4My5qcGc" alt="Danta">
+                        <h3>Danta</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Danta</h3>
+                        <p>Mamífero herbívoro de gran tamaño, con un cuerpo robusto y una piel gruesa de color marrón oscuro. Es una especie clave para el ecosistema andino.</p>
+                    </div>
+                </div>
+                <div class="card"> 
+                    <div class="face front">
+                        <img src="https://imgs.search.brave.com/b151F4mritCkFHAnFkF1-QU5yDCxQliK54hlLnrcf8I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kMnlv/bzNxdTZ2cms1ZC5j/bG91ZGZyb250Lm5l/dC9pbWFnZXMvMjAy/MjA1MDIyMDIyNDcv/Y3JvcHBlZC02ZDM5/OThjOC04ZmMzLTQ4/NjctODgzNS03MTMx/ZGZhOGQ1YTctMy53/ZWJw" alt="Rana Rubí">
+                        <h3>Rana Rubí</h3>
+                    </div>
+                    <div class=" face back">
+                        <h3>Rana Rubí</h3>
+                        <p>Especie de rana que vive en los páramos y bosques de altta montaña, conocida por su piel colorida.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="seccion3" class="container-fondo" > 
+              <div class="container-fondo2">
+                <div class="encabezados_Seccion3" id="margen-top3">
+                    <h2 id="paramos">PÁRAMOS DE CUNDINAMARCA</h2>
+                </div>
+                <div class="contenido-seccion3">
+                    <div class="imag_left slider-img">
+                        <ul>    
+                            <li><img src="https://imgs.search.brave.com/meKQmInP8wA6Zr7F9mSvneW_G3KtmsWVJMa0maEAzKg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zLmZy/YW5jZTI0LmNvbS9t/ZWRpYS9kaXNwbGF5/LzQyMDc3NjBjLTA2/OTAtMTFlYy1iOTFm/LTAwNTA1NmE5MDI4/NC93Ojk4MC9wOjE2/eDkvRk9UTyUyMDEu/anBlZw" alt="Páramo de Sumapaz"></li> 
+                            <li><img src="https://archivo.minambiente.gov.co/images/BosquesBiodiversidadyServiciosEcosistemicos/imagenes/Inicio_Sumapaz.png" alt="Páramo de Cruz Verde"></li>
+                            <li><img src="https://awali.com.co/wp-content/uploads/2015/09/Chingaza-3.jpg" alt="Páramo de Chingaza"></li>
+                            <li><img src="https://imagenes.noticiasrcn.com/ImgNoticias/styles/530xauto/s3/noticias/piedras_de_moya2.jpg" alt="Paramo de Piedras de Moyas"></li>
+                        </ul>    
+                    </div>
+                    <div class="texto-seccion3">
+                        <p>Los páramos de Cundinamarca son ecosistemas de alta montaña ubicados en la región andina de Colombia. Estos ecosistemas son fundamentales para la regulación del ciclo del agua, ya que actúan como esponjas que capturan y almacenan agua de la niebla y la lluvia, liberándola gradualmente hacia los ríos y quebradas, lo que los convierte en fuentes de agua vitales para las poblaciones humanas y la biodiversidad de la región.</p>
+                    </div>
+                </div>
+                <div class="encabezados_Seccion3">
+                    <h2>PÁRAMOS DE BOYACÁ</h2>
+                </div>
+                <div class="contenido-seccion3" id="margen-boton3">
+                    <div class="texto-seccion3">
+                        <p>Los páramos de Boyacá son una parte esencial de los ecosistemas andinos en Colombia, conocidos por su biodiversidad, sus funciones ecológicas vitales y su importancia cultural. Estos páramos, como otros en la región andina, son ecosistemas de alta montaña que desempeñan un papel crucial en la regulación hídrica y en la conservación de especies endémicas.</p>
+                    </div>
+                    <div class="imag_rigth slider-img">
+                        <ul>
+                            <li><img src="https://imgs.search.brave.com/HXsmx0EYKy5MuQazjoSbjlgOvP9EdQPSiGAlUtZxh5k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaXR1/ci5ib3lhY2EuZ292/LmNvL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE3LzA1L1AlQzMl/QTFyYW1vLWRlLVBp/c2JhU29jb3RhMDIt/bWluLTU3MHgzMjAu/anBn" alt="Páramo de Pisba"></li>
+                            <li><img src="https://www.corpoboyaca.gov.co/cms/wp-content/uploads/2017/11/altiplano-00003.jpg" alt="Páramo Altiplano Cundiboyacense"></li>
+                            <li><img src="https://www.corpoboyaca.gov.co/cms/wp-content/uploads/2021/11/Convenio-con-las-CAS.jpeg" alt="Páramo Iguaque – Merchán"></li>
+                            <li><img src="https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/DKWE6ZSUURLJDEWL5P2XHXRT5A.jpg" alt="Páramo Guantiva – La Rusia"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <section id="seccion-graficos" class="container" >
+            <div id="estadisticas" class="encabezados-graficos">
+                <h2>ESPECIES EN PELIGRO DE EXTINCIÓN</h2>
+            </div>
+            <div class="encabezados-graficos2" id="grafico-boya">
+                <h3>BOYACÁ</h2>
+            </div>
+            <div id="seccion-graficos-contenido">
+                <div class="graficos-municipios-total">
+                    <iframe src="graficos/grafico_municipal_boyaca.html"></iframe>
+                </div>
+                <div class="graficos-por-municipio">
+                    <div class="grafico-iz">
+                        <iframe src="graficos/grafico_duitama.html" frameborder="0"></iframe>
+                    </div>
+                    <div class="grafico-der">
+                        <iframe src="graficos/grafico_villa_leyva.html" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="encabezados-graficos2" id="grafico-cundi">
+                <h3>CUNDINAMARCA</h2>
+            </div>
+            <div id="seccion-graficos-contenido">
+                <div class="graficos-municipios-total">
+                    <iframe src="graficos/grafico_municipal_cundinamarca.html"></iframe>
+                </div>
+                <div class="graficos-por-municipio">
+                    <div class="grafico-iz">
+                        <iframe src="graficos/grafico_funza.html" frameborder="0"></iframe>
+                    </div>
+                    <div class="grafico-der">
+                        <iframe src="graficos/grafico_cota.html" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="seccion4" class="container" >
+            <div class="encabezados_mapas">  
+                <h2 id="mapas">MAPAS DEPARTAMENTALES</h2>
+            </div>
+
+            <div class="seccion4-contenido">
+                
+                <div class="left">
+                    <div class="nombre-dep">
+                        <h2>Cundinamarca</h2>
+                    </div>
+                    <!--Mapa Cundinamarca-->
+                    <select name="Seleccionar-Paramo" id="seleccionar-paramo">
+                        <option value="-1">Seleccione el paramo de su interes</option>
+                        <option value="4.517864102432524, -73.75027924754262">Páramo de Chingaza</option>
+                        <option value="4.541342718736326, -74.03636698913603">Páramo de Cruz Verde</option>
+                        <option value="3.753167070675843, -74.41779599122788">Páramo de Sumapaz</option>
+                        <option value="5.428500464300887, -73.57006135021037">Páramo de Rabanal y Río Bogotá</option>
+                        <option value="5.066883733156485, -74.09999708931178">Páramo de Guerrero</option>
+                    </select>
+                    <div  id ="map" class="map-left"></div>
+
+                </div>
+
+                <div class="rigth">
+                    <div class="nombre-dep">
+                        <h2>Boyacá</h2>
+                    </div>
+
+                    <!--Mapa Boyacá-->
+                    <select name="Seleccionar-Paramo" id="seleccionar-paramo2">
+                        <option value="-1">Seleccione el paramo de su interes</option>
+                        <option value="5.420082140104871, -73.42149735572102">Páramo Altiplano Cundiboyacense</option>
+                        <option value="5.703416051527476, -73.46653917347882">Páramo Iguaque - Merchán</option>
+                        <option value="5.434280662263399, -73.56604449693455">Páramo Rabanal - Río Bogotá</option>
+                        <option value="5.2828753111968405, -73.24663715971354">Páramo Tota - Bijagual - Mamapacha</option>
+                        <option value="6.424428164269133, -72.32894114692405">Páramo Sierra Nevada del Cocuy</option>
+                        <option value="5.888060799980661, -72.56631811289154">Páramo de Pisba</option>
+                    </select>
+                    <div id="map-boy" class="map-rigth"></div>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="seccion5" class="container">
+            <div class="titulo-seccion5">
+                <h2>FUENTES BIBLIOGRÁFICAS</h2>
+            </div>
+            <div class="referencias">
+                <ul>
+                    <li>SiB Colombia. (s. f.). Biodiversidad en Cifras Boyacá. Sistema de Información sobre Biodiversidad de Colombia. Recuperado de: <a href="https://cifras.biodiversidad.co/boyaca" target="_blank">https://cifras.biodiversidad.co/boyaca</a></li>
+                    <br>
+                    <li>SiB Colombia. (s. f.). Biodiversidad en Cifras Cundinamarca. Sistema de Información sobre Biodiversidad de Colombia. Recuperado de: <a href="https://cifras.biodiversidad.co/cundinamarca" target="_blank">https://cifras.biodiversidad.co/cundinamarca</a></li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+              <div class="footer-column">
+                <h3>Inicio</h3>
+                <ul>
+                  <li><a href="#inicio">Sección Principal</a></li>
+                  <li><a href="#seccion1">Boyacá - Cundinamarca</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Flora y Fauna</h3>
+                <ul>
+                  <li><a href="#flora-boya">Flora Boyacá</a></li>
+                  <li><a href="#flora-cundi">Flora Cundinamarca</a></li>
+                  <li><a href="#fauna-boya">Fauna Boyacá</a></li>
+                  <li><a href="#fauna-cundi">Fauna Cundinamarca</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Gráficos</h3>
+                <ul>
+                  <li><a href="#grafico-boya">Especies en peligro de extinción en Boyacá</a></li>
+                  <li><a href="#grafico-cundi">Especies en peligro de extinción en Cundinamarca</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Mapas</h3>
+                <ul>
+                  <li><a href="#seccion4">Mapas</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Rocío Agatón, Sebastián [Apellido], Camilo Téllez - U. Sergio Arboleda, Talento Tech. Todos los derechos reservados.</p>
+            </div>
+          </footer>
+          
+
+        <!--JAVASCRIPT-->
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="proyecto_compartido.js"></script>
+        <script src="src/leaflet.legend.js"></script>
+        <script src="layers/municipios.js"></script>
+        <script src="layers/municipios_boyaca.js"></script>
+        
+    </body>
+</html>
