@@ -285,7 +285,7 @@ body.dark .referencias li a:active{
 #seccion1{
     justify-content: space-evenly;
     width: 100%;
-    display: flex  
+    display: flex;  
 }
 
 .boyaca_cundinamarca{
