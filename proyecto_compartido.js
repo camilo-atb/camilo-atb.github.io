@@ -84,6 +84,7 @@ document.getElementById("seleccionar-paramo2").addEventListener("change", functi
     if (coordenadas.length === 2) { 
 
         let lat = parseFloat(coordenadas[0]); 
+        let lng = parseFloat(coordenadas[1]); // Definir la longitud
 
         // Usa flyTo con las coordenadas y el nivel de zoom
         map_boyaca.flyTo([lat, lng], 11);
