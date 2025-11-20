@@ -13,7 +13,7 @@ Currently, two official plugins are available:
 - ImageKit
 
 ## 🌐 Enlace a la web  
-[Haz clic aquí para ver la página](https://tu-pagina.com](https://camilo-atb.github.io/)
+[Haz clic aquí para ver la página](https://camilo-atb.github.io/)
 
 ## 🤝 Contribuciones
 Este es un proyecto personal, pero estoy abierto a sugerencias o mejoras a través de issues o pull requests.
