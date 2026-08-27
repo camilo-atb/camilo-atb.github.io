@@ -1,0 +1,31 @@
+<section class="py-24 bg-slate-900/50" id="stack" appScrollReveal>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-12">
+      <h2 class="text-4xl font-bold text-white mb-8 border-l-4 border-primary pl-4">{{ languageService.t("stack.title") }}</h2>
+    </div>
+
+    <!-- Infinite marquee -->
+    <div class="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+      <div class="flex items-center w-max animate-marquee hover:[animation-play-state:paused]">
+        <!-- First set -->
+        @for (technology of technologies(); track technology.id) {
+          <div class="flex flex-col items-center justify-center mx-6 md:mx-8 min-w-[100px] py-4">
+            <div class="w-16 h-16 mb-3 flex items-center justify-center shrink-0 rounded-full bg-white/5 border border-white/10 hover:border-primary/40 hover:scale-110 transition-all duration-300">
+              <img class="w-10 h-10" [src]="iconService.getIcon(technology.icon)" [alt]="technology.label">
+            </div>
+            <span class="text-sm font-semibold text-slate-300">{{ technology.label }}</span>
+          </div>
+        }
+        <!-- Duplicate set for seamless loop -->
+        @for (technology of technologies(); track technology.id) {
+          <div class="flex flex-col items-center justify-center mx-6 md:mx-8 min-w-[100px] py-4">
+            <div class="w-16 h-16 mb-3 flex items-center justify-center shrink-0 rounded-full bg-white/5 border border-white/10 hover:border-primary/40 hover:scale-110 transition-all duration-300">
+              <img class="w-10 h-10" [src]="iconService.getIcon(technology.icon)" [alt]="technology.label">
+            </div>
+            <span class="text-sm font-semibold text-slate-300">{{ technology.label }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

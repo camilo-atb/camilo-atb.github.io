@@ -1,0 +1,39 @@
+<section class="py-24 max-w-6xl mx-auto px-6" id="work">
+	<div class="mb-16">
+		<h2 class="text-4xl font-bold text-white mb-8 border-l-4 border-primary pl-4">{{ languageService.t('projects.title') }}</h2>
+		<p class="text-slate-400 max-w-2xl">{{ languageService.t('projects.subtitle') }}</p>
+	</div>
+
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+		@for (project of projects(); track project.id) {
+			<article class="glass-card rounded-custom overflow-hidden group border border-white/10 hover:border-primary/40 transition-all duration-300">
+				<div class="h-48 bg-gradient-to-br from-slate-900 via-slate-800 to-primary/40 flex items-center justify-center p-4">
+					<div class="w-full h-full border border-white/20 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-500">
+						{{ project.emoji }}
+					</div>
+				</div>
+
+				<div class="p-6">
+					<div class="flex flex-wrap gap-2 mb-4">
+						@for (tag of project.tags; track tag) {
+							<span class="text-[10px] font-bold tracking-widest uppercase py-1 px-2 bg-slate-800 text-slate-300 rounded">{{ tag }}</span>
+						}
+					</div>
+
+					<h3 class="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+						{{ project.title }}
+					</h3>
+
+					<p class="text-sm text-slate-400 mb-5 leading-relaxed line-clamp-3">
+						{{ project.description }}
+					</p>
+
+					<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" [href]="project.url" target="_blank" rel="noreferrer">
+						Ver repositorio
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+					</a>
+				</div>
+			</article>
+		}
+	</div>
+</section>

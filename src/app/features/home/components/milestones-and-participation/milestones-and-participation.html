@@ -1,0 +1,40 @@
+<section class="py-24 bg-darkBg relative overflow-hidden" id="milestones" appScrollReveal>
+  <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+      <div class="max-w-3xl">
+        <h2 class="text-4xl font-bold text-white mb-8 border-l-4 border-primary pl-4">
+          {{ languageService.t('milestones.title') }}
+        </h2>
+        <p class="text-slate-400 max-w-md">{{ languageService.t('milestones.subtitle') }}</p>
+      </div>
+      <div class="text-primary font-mono text-sm tracking-widest uppercase">2023 - Present</div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      @for (milestone of milestones(); track milestone.id) {
+        <article class="group relative p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+
+          <div class="relative z-10">
+            <div class="flex justify-between items-start mb-6 gap-4">
+              <span class="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider border border-primary/20">
+                {{ milestone.role }}
+              </span>
+              <span class="text-slate-500 font-mono text-sm">{{ milestone.date }}</span>
+            </div>
+
+            <h3 class="text-2xl text-white font-bold mb-3 group-hover:text-primary transition-colors">
+              {{ milestone.title }}
+            </h3>
+            <p class="text-slate-400 leading-relaxed">
+              {{ milestone.description }}
+            </p>
+          </div>
+        </article>
+      }
+
+    </div>
+  </div>
+</section>

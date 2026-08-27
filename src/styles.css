@@ -1,3 +1,170 @@
-/* You can add global styles to this file, and also import other style files */
-
+@config "../tailwind.config.js";
 @import "tailwindcss";
+
+:root {
+  --color-primary: #1773cf;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Dark mode (default) */
+html.dark body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Light mode */
+html.light body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Light mode glass-card */
+html.light .glass-card {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .glass-card:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid var(--color-primary) !important;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-primary) 25%, transparent) !important;
+}
+
+html.light .text-glow {
+  text-shadow: none;
+}
+
+/* Light mode — navbar text */
+html.light .site-navbar .text-white,
+html.light .site-navbar .text-white\/90 {
+  color: #1e293b;
+}
+
+html.light .site-navbar .text-slate-200 {
+  color: #475569;
+}
+
+html.light .site-navbar .text-slate-400 {
+  color: #64748b;
+}
+
+html.light .site-navbar .glass-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Light mode — settings panel */
+html.light .text-white\/80 {
+  color: #475569;
+}
+
+html.light .text-white\/40 {
+  color: #94a3b8;
+}
+
+html.light .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Light mode — hero */
+html.light .animated-gradient {
+  background-image: linear-gradient(-45deg, #bfdbfe, #c7d2fe, color-mix(in srgb, var(--color-primary) 30%, white), #e0f2fe) !important;
+}
+
+html.light .animated-gradient .mix-blend-screen {
+  mix-blend-mode: multiply;
+  opacity: 0.15;
+}
+
+html.light .animated-gradient .bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #1e293b, var(--color-primary)) !important;
+}
+
+html.light .animated-gradient .text-slate-400 {
+  color: #475569;
+}
+
+html.light .animated-gradient .glass-card {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Light mode text overrides */
+html.light .text-white:not(.bg-primary):not([class*="bg-primary"]) {
+  color: #1e293b;
+}
+
+html.light .text-slate-400 {
+  color: #64748b;
+}
+
+html.light .text-slate-300 {
+  color: #475569;
+}
+
+html.light .text-slate-500 {
+  color: #64748b;
+}
+
+/* Light mode backgrounds */
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/30 {
+  background-color: rgba(241, 245, 249, 0.7);
+}
+
+html.light .bg-darkBg {
+  background-color: #f1f5f9;
+}
+
+html.light .border-slate-800 {
+  border-color: #e2e8f0;
+}
+
+html.light .border-slate-700 {
+  border-color: #e2e8f0;
+}
+
+html.light .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+html.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Light mode — experience timeline */
+html.light .border-l.border-slate-700 {
+  border-color: #e2e8f0;
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-card:hover {
+    border: 1px solid color-mix(in srgb, var(--color-primary) 60%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+}

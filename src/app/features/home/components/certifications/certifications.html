@@ -1,0 +1,45 @@
+<section class="py-24 max-w-6xl mx-auto px-6" id="certifications" appScrollReveal>
+  <div class="mb-16">
+    <h2 class="text-4xl font-bold text-white mb-8 border-l-4 border-primary pl-4">{{ languageService.t("certifications.title") }}</h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @for (certification of certifications(); track certification.id) {
+      <div class="glass-card p-6 rounded-custom flex items-center gap-5">
+        <div class="shrink-0 w-14 h-14 bg-white/5 rounded-custom flex items-center justify-center overflow-hidden">
+          <img class="w-10 h-10" [src]="logoService.getLogo(certification.logoEntity)"/>
+        </div>
+        <div class="min-w-0">
+          <h3 class="text-white font-bold text-sm leading-tight">{{ certification.label }}</h3>
+          <p class="text-xs text-slate-400 mt-1">{{ certification.entity }}</p>
+          <p class="text-xs text-slate-500 mt-0.5">{{ certification.date }}</p>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Pagination -->
+  @if (totalPages() > 1) {
+    <div class="flex items-center justify-center gap-4 mt-10">
+      <button
+        class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:border-primary/50 hover:text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+        [disabled]="page() === 0"
+        (click)="prevPage()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+
+      <span class="text-sm text-slate-400 font-mono">{{ page() + 1 }} / {{ totalPages() }}</span>
+
+      <button
+        class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:border-primary/50 hover:text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+        [disabled]="page() === totalPages() - 1"
+        (click)="nextPage()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+    </div>
+  }
+</section>

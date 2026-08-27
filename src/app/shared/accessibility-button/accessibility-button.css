@@ -1,0 +1,8 @@
+/* Esto hace que el "contenedor" del componente sea una caja real */
+:host {
+  display: block;
+  position: fixed; /* O absolute, dependiendo de tu diseño */
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+}

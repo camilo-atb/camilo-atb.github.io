@@ -1,0 +1,28 @@
+.site-navbar .menu-toggle {
+	display: inline-flex;
+}
+
+.site-navbar .desktop-nav,
+.site-navbar .mobile-nav {
+	width: 100%;
+}
+
+@media (min-width: 878px) {
+	.site-navbar .menu-toggle {
+		display: none;
+	}
+
+	.site-navbar .desktop-nav {
+		display: flex;
+	}
+
+	.site-navbar .mobile-nav {
+		display: none;
+	}
+}
+
+@media (max-width: 877px) {
+	.site-navbar .desktop-nav {
+		display: none;
+	}
+}

@@ -1,0 +1,29 @@
+<section class="relative min-h-screen flex items-center justify-center animated-gradient overflow-hidden px-4 sm:px-6" id="hero">
+  <!-- Floating Background Shapes -->
+  <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob hidden sm:block"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000 hidden sm:block"></div>
+  <div class="absolute -bottom-8 left-1/2 w-64 h-64 bg-blue-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-4000 hidden md:block"></div>
+
+  <div class="relative z-10 text-center max-w-4xl w-full">
+    <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-linear-to-r from-white to-primary text-glow leading-[0.95] wrap-break-word">
+      {{ langService.t("hero.title") }} <br/>{{ langService.t("hero.title2") }}
+    </h1>
+    <p class="text-base sm:text-lg md:text-2xl text-slate-400 mb-8 sm:mb-10 font-light max-w-2xl mx-auto leading-relaxed px-1 sm:px-0">
+      {{ langService.t("hero.subtitle") }}
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-md mx-auto sm:max-w-none">
+      <a class="px-6 sm:px-8 py-4 bg-primary text-white font-semibold rounded-custom hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(23,115,207,0.4)] text-sm sm:text-base w-full sm:w-auto" href="#experience">
+        {{ langService.t("hero.workBtn") }}
+      </a>
+      <a class="px-6 sm:px-8 py-4 glass-card text-white font-semibold rounded-custom hover:bg-white/10 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto" href="#contact">
+        {{ langService.t("hero.contactBtn") }}
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 hover:opacity-100 transition-opacity">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+  </a>
+</section>
+
